@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Explore a private, considered introduction to the Transformative Living vision in Masrul, Nashik, with an original atmospheric concept film and interactive concierge.">
+  <title>Private Concierge — Transformative Living | Masrul, Nashik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pine:#263e33; --pine-dark:#152b23; --pine-soft:#496154;
+      --linen:#f7f4ed; --ivory:#fffdf8; --canvas:#eeeee6;
+      --ink:#24342b; --muted:#68776e; --border:#dedfd5; --gold:#ba9660;
+      --terracotta:#ae755c; --error:#ad453b; --shadow:0 20px 75px rgba(24,45,34,.10);
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',Arial,sans-serif;
+    }
+    *,*::before,*::after {box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;font-family:var(--sans);font-size:15px;line-height:1.65;color:var(--ink);background:var(--linen);-webkit-font-smoothing:antialiased}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+    .container{width:min(1280px,calc(100% - 88px));margin:auto}
+    .kicker{font-size:10px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--pine-soft)}
+    .section-title{font-family:var(--serif);font-size:clamp(43px,5vw,74px);line-height:.98;font-weight:500;letter-spacing:-.025em;margin:16px 0 20px}
+    .section-lead{font-size:16px;color:#65746a;max-width:550px;line-height:1.9}
+    .small-rule{width:46px;height:1px;background:var(--gold);display:block;margin:28px 0}
+    .btn{border-radius:3px;border:1px solid transparent;padding:16px 22px;display:inline-flex;align-items:center;justify-content:center;gap:17px;min-height:54px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;transition:background .2s,transform .2s,border-color .2s;white-space:normal;text-align:center}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--pine);color:#fff}
+    .btn-primary:hover{background:#3a5848}
+    .btn-outline{background:transparent;color:var(--pine);border-color:#86978a}
+    .btn-outline:hover{border-color:var(--pine);background:rgba(38,62,51,.045)}
+    .btn-light{background:var(--ivory);color:var(--pine)}
+    .arrow{font-size:18px;line-height:1;font-weight:400}
+    .site-header{height:89px;display:flex;align-items:center;position:relative;z-index:50;background:rgba(247,244,237,.96);border-bottom:1px solid rgba(40,61,49,.13)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;width:min(1440px,calc(100% - 88px));margin:auto;gap:28px}
+    .brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
+    .brand-mark{width:37px;height:37px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:25px;color:var(--pine);line-height:1}
+    .brand-name{font-size:10px;line-height:1.55;font-weight:700;letter-spacing:.20em;text-transform:uppercase}
+    .brand-place{display:block;font-size:9px;color:var(--muted);font-weight:500;letter-spacing:.25em;margin-top:2px}
+    .main-nav{display:flex;align-items:center;gap:38px;margin-left:auto}
+    .main-nav a:not(.nav-cta){font-size:11px;letter-spacing:.06em;transition:color .2s}
+    .main-nav a:hover{color:var(--terracotta)}
+    .nav-cta{border:1px solid var(--pine);padding:12px 18px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700}
+    .menu-toggle{display:none;background:none;border:1px solid var(--border);color:var(--pine);font-size:21px;width:43px;height:43px}
+    .hero{min-height:680px;display:grid;grid-template-columns:minmax(0,48%) minmax(0,52%);background:var(--linen)}
+    .hero-copy{display:flex;align-items:center;padding:80px max(6vw,calc((100vw - 1280px)/2)) 96px max(44px,calc((100vw - 1280px)/2));min-width:0}
+    .hero-copy-inner{max-width:560px}
+    .eyebrow-line{display:flex;align-items:center;gap:12px}
+    .eyebrow-line::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+    h1{font-family:var(--serif);font-size:clamp(69px,7.2vw,123px);line-height:.84;font-weight:500;letter-spacing:-.045em;margin:35px 0 28px}
+    h1 em{font-weight:400;color:var(--pine-soft)}
+    .hero-desc{font-size:16px;line-height:1.95;color:#657469;max-width:415px}
+    .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:38px}
+    .hero-caption{display:flex;align-items:center;gap:14px;margin-top:55px;font-size:11px;color:#748277;letter-spacing:.04em}
+    .hero-caption::before{content:'';width:31px;height:1px;background:var(--gold)}
+    .hero-media{position:relative;min-height:630px;overflow:hidden;background:linear-gradient(145deg,#8f9d7b,#293c30)}
+    .hero-video,.hero-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:54% center}
+    .hero-video{z-index:1;background:#405c50;display:block;opacity:.21;mix-blend-mode:screen}
+    .hero-photo-layer{z-index:0;object-position:center 47%;transform:scale(1.055);animation:natureDrift 15s ease-in-out infinite alternate;filter:saturate(.86) brightness(.94)}
+    @keyframes natureDrift{from{transform:scale(1.055) translate3d(-.3%,0,0)}to{transform:scale(1.13) translate3d(1.2%,-.7%,0)}}
+    .hero-film-actions{position:absolute;top:25px;right:26px;z-index:4;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .film-btn{background:rgba(19,37,29,.66);color:#fff;border:1px solid rgba(255,255,255,.57);border-radius:2px;padding:10px 12px;display:inline-flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.08em;line-height:1.25;backdrop-filter:blur(8px);transition:background .2s ease}
+    .film-btn:hover{background:rgba(19,37,29,.88)}
+    .film-btn:focus-visible{outline:3px solid #f2dcae;outline-offset:3px}
+    .hero-film-caption{position:absolute;top:29px;left:33px;z-index:3;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+    .film-dialog{border:0;background:#101e17;padding:0;max-width:min(1100px,94vw);width:100%;color:#fff;box-shadow:0 30px 85px rgba(0,0,0,.4)}
+    .film-dialog::backdrop{background:rgba(5,16,12,.89);backdrop-filter:blur(8px)}
+    .film-dialog-top{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 23px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#e4e5d7}
+    .film-dialog video{display:block;width:100%;aspect-ratio:16/9;background:#152c23;object-fit:contain}
+    .film-dialog-footer{padding:14px 23px 21px;font-size:11px;line-height:1.7;color:#bbc8bd}
+    .dialog-close{border:1px solid #718379;padding:8px 12px;background:transparent;color:#fff;font:inherit;cursor:pointer}
+    .dialog-close:hover{background:#294035}
+
+    .hero-media::after{pointer-events:none;content:'';z-index:1;position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,25,17,.05) 40%,rgba(6,30,22,.78) 100%)}
+    .hero-photo-note{position:absolute;left:37px;bottom:34px;color:white;z-index:3;display:flex;gap:18px;align-items:end;width:calc(100% - 75px);justify-content:space-between}
+    .hero-photo-note strong{font-family:var(--serif);font-size:32px;font-weight:500;line-height:1.05}
+    .hero-photo-note span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;opacity:.82;text-align:right;max-width:170px;line-height:1.6}
+    .trustbar{background:#e8eae1;border-bottom:1px solid #dfe2d8}
+    .trustbar-inner{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0;gap:24px}
+    .trust-item{display:flex;align-items:center;gap:15px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#526256}
+    .trust-icon{font-family:var(--serif);font-size:33px;color:var(--gold);font-weight:500;line-height:1}
+    .intro{padding:122px 0 80px}
+    .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}
+    .intro-quote{font-family:var(--serif);font-size:clamp(31px,3.1vw,50px);line-height:1.15;color:var(--pine);font-weight:500;max-width:560px;margin:0}
+    .intro-description{font-size:15px;color:#68766a;line-height:2.1;max-width:480px}
+    .choices{padding:25px 0 120px}
+    .choices-header{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+    .choices-header .section-title{font-size:clamp(40px,4.5vw,65px);margin-bottom:0}
+    .choices-header p{font-size:14px;color:var(--muted);max-width:350px}
+    .service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .service-card{min-height:335px;background:var(--ivory);border:1px solid #e3e4db;padding:32px 25px 25px;display:flex;flex-direction:column;position:relative;transition:border-color .2s, transform .2s,box-shadow .2s;text-align:left;color:inherit;width:100%}
+    .service-card:hover,.service-card:focus-visible{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow)}
+    .service-index{font-family:var(--serif);font-size:27px;color:var(--gold);line-height:1}
+    .service-symbol{margin-top:39px;font-size:31px;color:var(--pine);line-height:1}
+    .service-card h3{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1.1;margin:21px 0 13px}
+    .service-card p{color:var(--muted);font-size:12px;line-height:1.85;margin:0}
+    .service-action{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;margin-top:auto;padding-top:24px;color:var(--pine)}
+    .interlude{display:grid;grid-template-columns:50% 50%;min-height:490px;background:var(--pine-dark)}
+    .interlude-image{position:relative;background:#4b6355}
+    .interlude-image img{width:100%;height:100%;position:absolute;object-fit:cover;filter:saturate(.82)}
+    .photo-label{position:absolute;bottom:22px;left:28px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(24,39,31,.75);padding:10px 12px}
+    .interlude-copy{display:flex;align-items:center;padding:85px 12%}
+    .interlude-copy .kicker{color:#b9c8bb}
+    .interlude-copy h2{color:#f8f4e8;font-family:var(--serif);font-size:clamp(40px,4vw,63px);font-weight:400;line-height:1.02;margin:24px 0 24px}
+    .interlude-copy p{color:#ced8cd;line-height:2;max-width:430px}
+    .interlude-copy .small-rule{margin-bottom:0}
+    .concierge-section{padding:120px 0 128px;background:#eeefe8}
+    .concierge-intro{text-align:center;max-width:740px;margin:0 auto 46px}
+    .concierge-intro .section-title{margin-top:18px}
+    .concierge-intro p{color:#69776c;font-size:15px;line-height:1.9}
+    .concierge-shell{display:grid;grid-template-columns:minmax(310px,42%) minmax(0,58%);min-height:720px;background:var(--ivory);box-shadow:0 28px 78px rgba(33,51,39,.085)}
+    .concierge-aside{position:relative;background:linear-gradient(155deg,#5e7e6b,#203b2c);color:#fff;min-height:720px;overflow:hidden}
+    .concierge-aside img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.80)}
+    .concierge-aside::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,31,22,.12) 7%,rgba(10,31,21,.20) 43%,rgba(12,32,24,.86) 100%)}
+    .aside-top,.aside-bottom{position:absolute;left:46px;right:42px;z-index:2}
+    .aside-top{top:41px;font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:white}
+    .aside-bottom{bottom:47px}
+    .aside-bottom h3{font-family:var(--serif);font-size:clamp(45px,4.8vw,72px);font-weight:400;line-height:.94;margin:0 0 20px}
+    .aside-bottom p{max-width:340px;font-size:13px;line-height:1.9;color:#e2e9df}
+    .concierge-form-panel{padding:54px clamp(30px,5vw,74px) 48px;min-width:0}
+    .form-header{display:flex;align-items:start;justify-content:space-between;gap:18px}
+    .form-header h3{font-family:var(--serif);font-size:42px;line-height:1.02;font-weight:500;margin:12px 0 10px}
+    .form-kicker{font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--pine-soft);text-transform:uppercase}
+    .demo-label{flex-shrink:0;background:#f6f0e4;color:#8e7147;font-size:9px;font-weight:700;line-height:1.5;letter-spacing:.09em;padding:9px 11px;text-transform:uppercase;border:1px solid #e6d7bd}
+    .form-lead{font-size:13px;line-height:1.8;color:var(--muted);margin:0 0 24px}
+    .progress{display:flex;gap:6px;align-items:center;margin:26px 0 29px}
+    .progress-segment{height:3px;background:#e4e6dd;flex:1;transition:background .2s}
+    .progress-segment.active{background:var(--gold)}
+    .progress-meta{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:#7a897d;margin-top:-17px;margin-bottom:30px}
+    .step-panel{display:none;animation:appear .3s ease}
+    .step-panel.active{display:block}
+    @keyframes appear{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+    .form-label{display:block;font-size:11px;letter-spacing:.08em;font-weight:700;color:#435547;margin:18px 0 8px}
+    .field-note{font-size:10px;color:var(--muted);font-weight:400;letter-spacing:0}
+    .input,.textarea,.select{width:100%;border:1px solid #d7dcd2;background:#fffefa;color:var(--ink);padding:14px 14px;border-radius:2px;min-height:49px;transition:border .2s}
+    .input:focus,.textarea:focus,.select:focus{border-color:var(--gold);outline:2px solid rgba(186,150,96,.2);outline-offset:0}
+    .textarea{min-height:98px;resize:vertical}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .radio-cards{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:13px}
+    .radio-card{border:1px solid #dce0d7;padding:17px 15px;cursor:pointer;display:block;position:relative;transition:background .15s,border-color .15s;min-height:83px;background:#fffefa}
+    .radio-card:has(input:checked){border-color:var(--pine);background:#edf2ec}
+    .radio-card input{position:absolute;opacity:0;width:1px;height:1px}
+    .radio-card:has(input:focus-visible){outline:3px solid var(--gold);outline-offset:2px}
+    .radio-card strong{display:block;font-size:12px;line-height:1.45;font-weight:700}
+    .radio-card small{display:block;font-size:10px;color:#718074;margin-top:5px;line-height:1.5}
+    .radio-card::after{content:'';position:absolute;right:13px;top:14px;width:13px;height:13px;border:1px solid #b0bfb2;border-radius:50%}
+    .radio-card:has(input:checked)::after{background:var(--pine);box-shadow:inset 0 0 0 3px #edf2ec;border-color:var(--pine)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{display:block;cursor:pointer;position:relative}
+    .chip input{position:absolute;opacity:0;width:1px;height:1px}
+    .chip span{display:block;padding:9px 13px;border:1px solid #d8ddd3;background:#fffefa;font-size:11px;color:#536659;transition:all .15s}
+    .chip input:checked+span{background:var(--pine);color:white;border-color:var(--pine)}
+    .chip input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+    .selection-summary{background:#eef2eb;border-left:2px solid var(--gold);padding:15px 18px;font-size:12px;color:#546658;line-height:1.8;margin:19px 0}
+    .checkbox-row{display:flex;align-items:start;gap:10px;margin-top:17px;font-size:11px;color:#65746a;line-height:1.8}
+    .checkbox-row input{margin-top:4px;accent-color:var(--pine);width:16px;height:16px;flex:0 0 16px}
+    .required{color:var(--error)}
+    .error{font-size:11px;color:var(--error);margin-top:7px;min-height:0}
+    .error:empty{display:none}
+    .field-invalid{border-color:var(--error)!important}
+    .step-actions{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:34px;border-top:1px solid #e5e8df;padding-top:26px}
+    .text-button{border:none;background:none;color:var(--pine);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 0}
+    .text-button:hover{text-decoration:underline}
+    .review-block{background:#f5f6f0;border:1px solid #e1e5dc;padding:19px 20px;margin:14px 0}
+    .review-row{display:grid;grid-template-columns:37% 63%;gap:14px;padding:10px 0;border-bottom:1px solid #e1e5dc;font-size:12px}
+    .review-row:last-child{border-bottom:0}
+    .review-row .key{color:#7c8a7e}
+    .review-row .value{font-weight:600;overflow-wrap:anywhere}
+    .success-icon{width:68px;height:68px;border:1px solid #afc4b3;background:#eef4eb;border-radius:50%;display:grid;place-items:center;font-size:29px;color:var(--pine);margin:42px 0 22px}
+    .success-title{font-family:var(--serif);font-size:54px;font-weight:500;line-height:1;margin:0 0 21px}
+    .success-copy{font-size:14px;line-height:2;color:var(--muted)}
+    .success-disclaimer{padding:15px;background:#f7f0e3;border-left:2px solid var(--gold);font-size:12px;margin-top:25px;color:#756449}
+    .faq{padding:115px 0}
+    .faq-layout{display:grid;grid-template-columns:38% 55%;gap:7%}
+    .faq .section-title{font-size:clamp(40px,4.5vw,62px)}
+    .faq-list{border-top:1px solid var(--border)}
+    details{border-bottom:1px solid var(--border);padding:21px 0}
+    summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:14px;font-weight:600;color:var(--ink)}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:'+';color:var(--gold);font-size:25px;font-family:var(--serif);line-height:1}
+    details[open] summary::after{content:'−'}
+    details p{font-size:12px;line-height:1.95;color:var(--muted);margin:14px 35px 3px 0}
+    .final-invite{background:var(--pine);color:#f4f4e9;padding:93px 0}
+    .final-invite-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .final-invite h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5vw,69px);line-height:1.02;margin:0}
+    .final-invite p{color:#c5d0c4;max-width:540px;font-size:13px;line-height:1.9}
+    .footer{background:#172d24;color:#d4ddd2;padding:47px 0 26px}
+    .footer-top{display:flex;justify-content:space-between;gap:40px;align-items:start}
+    .footer .brand-mark{color:#eee9d9}.footer .brand-name{color:#f4f2e9}.footer .brand-place{color:#bdcaba}
+    .footer-text{max-width:540px;font-size:11px;line-height:2;color:#adbcae}
+    .footer-bottom{border-top:1px solid #344a3e;padding-top:19px;margin-top:40px;display:flex;justify-content:space-between;gap:30px;color:#a6b6a7;font-size:10px;line-height:1.9}
+    .toast{position:fixed;bottom:22px;right:24px;z-index:80;background:var(--pine-dark);color:#fff;padding:14px 20px;max-width:370px;font-size:12px;box-shadow:var(--shadow);display:none}
+    .toast.show{display:block}
+    @media(max-width:1100px){
+      .main-nav{gap:19px}.hero-copy{padding-left:40px;padding-right:38px}.hero h1{font-size:clamp(68px,8vw,94px)}.container{width:calc(100% - 68px)}
+      .service-grid{grid-template-columns:repeat(2,1fr)}.service-card{min-height:295px}.service-symbol{margin-top:21px}
+      .concierge-form-panel{padding:45px 40px}.concierge-shell{grid-template-columns:40% 60%}
+    }
+    @media(max-width:800px){
+      .site-header{height:75px}.header-inner{width:calc(100% - 36px)}.container{width:calc(100% - 40px)}
+      .menu-toggle{display:grid;place-items:center}.main-nav{display:none;position:absolute;top:75px;left:0;right:0;background:var(--linen);padding:24px 26px 31px;box-shadow:0 18px 24px rgba(20,36,26,.1);flex-direction:column;align-items:stretch;gap:23px}.main-nav.open{display:flex}
+      .hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:70px 34px 69px}.hero h1{font-size:clamp(70px,12vw,102px)}.hero-media{min-height:480px}
+      .trustbar-inner{gap:15px}.trust-item{font-size:9px;gap:8px}.trust-icon{font-size:24px}
+      .intro{padding:90px 0 50px}.intro-grid{grid-template-columns:1fr;gap:20px}.choices{padding:30px 0 95px}.choices-header{align-items:start;flex-direction:column;gap:10px}
+      .interlude{grid-template-columns:1fr}.interlude-image{min-height:340px}.interlude-copy{padding:55px 35px}
+      .concierge-section{padding:85px 0}.concierge-shell{grid-template-columns:1fr}.concierge-aside{min-height:360px}.aside-bottom h3{max-width:530px;font-size:60px}.concierge-form-panel{padding:45px 36px}
+      .faq{padding:85px 0}.faq-layout{grid-template-columns:1fr;gap:25px}.final-invite-inner{align-items:start;flex-direction:column}
+    }
+    @media(max-width:520px){
+      .hero-film-caption{top:21px;left:19px;font-size:8px;max-width:45%}
+      .hero-film-actions{right:14px;top:12px;gap:5px}
+      .film-btn{padding:9px;font-size:9px}
+      .hero-video{object-position:center}
+
+      .hero-copy{padding:54px 23px 58px}.hero h1{font-size:clamp(63px,15vw,85px);margin-top:27px}.hero-desc{font-size:14px}.hero-media{min-height:360px}.hero-caption{margin-top:36px}
+      .hero-photo-note{left:20px;bottom:20px;width:calc(100% - 40px)}.hero-photo-note strong{font-size:23px}.hero-photo-note span{font-size:7px;max-width:120px}
+      .hero-actions{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}
+      .trustbar-inner{grid-template-columns:1fr;gap:12px;padding:18px 0}.trust-item{font-size:10px}.trust-icon{width:36px}
+      .service-grid{grid-template-columns:1fr}.service-card{min-height:256px;padding:25px}.service-symbol{margin-top:10px}
+      .concierge-section{padding:65px 0}.concierge-intro{margin-bottom:32px}.concierge-form-panel{padding:36px 20px 38px}.concierge-aside{min-height:310px}
+      .aside-top,.aside-bottom{left:24px;right:24px}.aside-top{top:25px}.aside-bottom{bottom:22px}.aside-bottom h3{font-size:48px}
+      .form-header h3{font-size:34px}.demo-label{font-size:8px;padding:7px}.field-row{grid-template-columns:1fr;gap:0}.radio-cards{grid-template-columns:1fr 1fr;gap:8px}.radio-card{padding:12px;min-height:83px}.radio-card strong{font-size:11px;padding-right:10px}.radio-card small{font-size:9px}
+      .step-actions .btn{padding:13px 15px;min-height:46px;letter-spacing:.08em;font-size:10px}.progress-meta{font-size:9px}
+      .footer-top,.footer-bottom{flex-direction:column;gap:16px}.final-invite{padding:70px 0}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only" style="position:absolute" onfocus="this.classList.remove('sr-only')">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="Transformative Living, back to top"><span class="brand-mark">T.</span><span class="brand-name">TRANSFORMATIVE<br>LIVING <span class="brand-place">MASRUL · NASHIK</span></span></a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#philosophy">The philosophy</a><a href="#experiences">Private experiences</a><a href="#questions">Questions</a><a href="#concierge" class="nav-cta">Begin a conversation ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-label="Welcome to the private concierge">
+      <div class="hero-copy">
+        <div class="hero-copy-inner">
+          <div class="eyebrow-line kicker">The private concierge</div>
+          <h1>The art of <em>arriving.</em></h1>
+          <p class="hero-desc">Some places deserve more than an ordinary introduction. Discover a considered, personal way to explore a new vision for living in harmony with nature.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#concierge">Request a private introduction <span class="arrow">↗</span></a><a class="btn btn-outline" href="#experiences">Explore the experience <span class="arrow">↓</span></a></div>
+          <div class="hero-caption">A transformative living vision · Masrul, Nashik</div>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Genuine Nashik-region landscape photograph with a generated, moving atmospheric concept-film layer. Not footage or photography of the Masrul property.">
+        <img class="hero-photo-layer" src="https://images.unsplash.com/photo-1689473679858-52767a72609f?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Real photograph of monsoon mountains in Bhandardara, Nashik region, used as an illustrative landscape reference, not the Masrul site" fetchpriority="high" onerror="this.style.display='none'; document.querySelector('#heroAmbient').style.opacity='1'; document.querySelector('#heroAmbient').style.mixBlendMode='normal'">
+        <video id="heroAmbient" class="hero-video" muted autoplay loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-label="Original moving landscape artwork depicting layered green hills and morning mist; illustrative, not filmed at the project site.">
+          <source src="assets/hero-ambient.mp4" type="video/mp4">
+          Your browser does not support background video. The regional landscape photograph is illustrative.
+        </video>
+        <div class="hero-film-caption">A sense of place · Concept film</div>
+        <div class="hero-film-actions" aria-label="Film controls">
+          <button class="film-btn" id="motionToggle" type="button" aria-label="Pause moving landscape" aria-pressed="false">Ⅱ <span id="motionLabel">Pause motion</span></button>
+          <button class="film-btn" id="openFilm" type="button" aria-haspopup="dialog" aria-controls="filmDialog">↗ View film</button>
+        </div>
+        <div class="hero-photo-note"><strong>Where a new<br>perspective begins.</strong><span>Regional photograph + original moving artwork<br>Not the project site</span></div>
+      </div>
+    </section>
+    <div class="trustbar" aria-label="Concierge principles"><div class="container trustbar-inner">
+      <div class="trust-item"><span class="trust-icon">01</span><span>Thoughtfully personal</span></div>
+      <div class="trust-item"><span class="trust-icon">02</span><span>Private by design</span></div>
+      <div class="trust-item"><span class="trust-icon">03</span><span>No ordinary sales pitch</span></div>
+    </div></div>
+    <section class="intro" id="philosophy"><div class="container intro-grid">
+      <div><div class="kicker">The invitation</div><h2 class="section-title">A conversation<br>before a commitment.</h2><span class="small-rule"></span></div>
+      <div><p class="intro-quote">“The most meaningful journey begins with understanding how you aspire to live.”</p><p class="intro-description">This isn't an enquiry about square footage. It's an opportunity to discover the ideas behind a more intentional life: natural surroundings, conscious engineering, family wellbeing and individual space.</p></div>
+    </div></section>
+    <section class="choices" id="experiences"><div class="container">
+      <div class="choices-header"><div><div class="kicker">Tailored to your curiosity</div><h2 class="section-title">Choose how we begin.</h2></div><p>Every introduction is shaped around your interests. Select the conversation that feels right for you.</p></div>
+      <div class="service-grid">
+        <button class="service-card" data-select="site" type="button"><span class="service-index">01</span><span class="service-symbol" aria-hidden="true">⌖</span><h3>Private site<br>consultation</h3><p>Request a personal introduction to the location and development vision. Scheduling is subject to availability.</p><span class="service-action">Express interest &nbsp;↗</span></button>
+        <button class="service-card" data-select="virtual" type="button"><span class="service-index">02</span><span class="service-symbol" aria-hidden="true">◌</span><h3>Virtual design<br>conversation</h3><p>Explore the philosophy, architectural direction and intended residential experience remotely.</p><span class="service-action">Express interest &nbsp;↗</span></button>
+        <button class="service-card" data-select="sustainability" type="button"><span class="service-index">03</span><span class="service-symbol" aria-hidden="true">✳</span><h3>Sustainability<br>dialogue</h3><p>Discuss proposed solar, water, circular-waste and biophilic systems, including their feasibility status.</p><span class="service-action">Express interest &nbsp;↗</span></button>
+        <button class="service-card" data-select="dossier" type="button"><span class="service-index">04</span><span class="service-symbol" aria-hidden="true">▤</span><h3>Request the<br>project dossier</h3><p>Register interest in receiving the official overview when approved project materials become available.</p><span class="service-action">Express interest &nbsp;↗</span></button>
+      </div>
+    </div></section>
+    <section class="interlude" aria-label="The philosophy of personal living">
+      <div class="interlude-image"><img loading="lazy" src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Authentic forest photograph with natural morning light" onerror="this.style.opacity=0"><div class="photo-label">Illustrative nature photography</div></div>
+      <div class="interlude-copy"><div><div class="kicker">Transformative living</div><h2>A quieter life.<br>A richer connection.</h2><p>Here, luxury is imagined through the quality of everyday moments — the morning light, the changing seasons, the closeness of nature and the freedom to live with greater intention.</p><span class="small-rule"></span></div></div>
+    </section>
+    <section class="concierge-section" id="concierge"><div class="container">
+      <div class="concierge-intro"><div class="kicker">Your private introduction</div><h2 class="section-title">Let us begin with you.</h2><p>A few thoughtful details help tailor the conversation. No pressured sales call, no instant booking promises.</p></div>
+      <div class="concierge-shell">
+        <aside class="concierge-aside" aria-label="Architectural atmosphere image"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea" alt="Authentic photograph of a light-filled contemporary home interior, illustrative of design atmosphere only" onerror="this.style.opacity=0"><div class="aside-top">A more personal way to begin</div><div class="aside-bottom"><h3>A space for<br>possibility.</h3><p>Share what matters to you. We will shape the first conversation around those interests.</p><span class="kicker" style="color:#dce2d7">Representative architecture photography · Not project imagery</span></div></aside>
+        <div class="concierge-form-panel">
+          <form id="enquiryForm" novalidate autocomplete="on">
+            <div class="form-header"><div><div class="form-kicker">Private concierge · enquiry</div><h3 id="formTitle">How would you<br>like to connect?</h3></div><span class="demo-label">Interactive<br>prototype</span></div>
+            <p class="form-lead" id="formDescription">Tell us what sparked your interest. We'll tailor the enquiry around you.</p>
+            <div class="progress" aria-hidden="true"><span class="progress-segment active"></span><span class="progress-segment"></span><span class="progress-segment"></span><span class="progress-segment"></span></div>
+            <div class="progress-meta"><span id="stepMeta">Step 01 of 04</span><span id="stepName">Your interest</span></div>
+            <div id="globalError" class="error" role="alert" aria-live="assertive"></div>
+            <section class="step-panel active" id="step1" aria-labelledby="step1Label"><h4 id="step1Label" class="sr-only">Choose your enquiry</h4>
+              <div class="form-label" id="enquiryTypeLabel">I am interested in <span class="required">*</span></div>
+              <div class="radio-cards" role="radiogroup" aria-labelledby="enquiryTypeLabel">
+                <label class="radio-card"><input type="radio" name="experience" value="site" checked><strong>Private site consultation</strong><small>Subject to access and availability</small></label>
+                <label class="radio-card"><input type="radio" name="experience" value="virtual"><strong>Virtual design discussion</strong><small>Meet from wherever you are</small></label>
+                <label class="radio-card"><input type="radio" name="experience" value="sustainability"><strong>Sustainability dialogue</strong><small>Energy, water and nature systems</small></label>
+                <label class="radio-card"><input type="radio" name="experience" value="dossier"><strong>Request a project dossier</strong><small>Approved materials when available</small></label>
+              </div>
+              <div class="form-label" id="interestLabel">What interests you most? <span class="field-note">(choose any)</span></div>
+              <div class="chips" role="group" aria-labelledby="interestLabel">
+                <label class="chip"><input type="checkbox" name="interest" value="Nature & wellness"><span>Nature & wellness</span></label>
+                <label class="chip"><input type="checkbox" name="interest" value="Sustainable energy"><span>Clean energy</span></label>
+                <label class="chip"><input type="checkbox" name="interest" value="Water & circular living"><span>Water & circular living</span></label>
+                <label class="chip"><input type="checkbox" name="interest" value="Architecture & villas"><span>Architecture & villas</span></label>
+                <label class="chip"><input type="checkbox" name="interest" value="Farming & nourishment"><span>Farming & nourishment</span></label>
+                <label class="chip"><input type="checkbox" name="interest" value="Community & legacy"><span>Community & legacy</span></label>
+              </div>
+              <div class="step-actions"><span style="font-size:11px;color:var(--muted)">Takes about 2 minutes</span><button type="button" class="btn btn-primary next" data-next="2">Continue <span class="arrow">→</span></button></div>
+            </section>
+            <section class="step-panel" id="step2" aria-labelledby="step2Label"><h4 id="step2Label" class="sr-only">Your preferred arrangements</h4>
+              <div class="form-label" id="formatLabel">Preferred conversation format</div>
+              <div class="radio-cards" role="radiogroup" aria-labelledby="formatLabel">
+                <label class="radio-card"><input type="radio" name="format" value="In-person" checked><strong>In-person</strong><small>Availability to be confirmed</small></label>
+                <label class="radio-card"><input type="radio" name="format" value="Video call"><strong>Video call</strong><small>Private online introduction</small></label>
+                <label class="radio-card"><input type="radio" name="format" value="Phone call"><strong>Phone call</strong><small>A conversation at your convenience</small></label>
+                <label class="radio-card"><input type="radio" name="format" value="Email only"><strong>Email only</strong><small>Share information discreetly</small></label>
+              </div>
+              <div class="field-row"><div><label class="form-label" for="preferredDate">Preferred date <span class="field-note">(optional)</span></label><input class="input" type="date" id="preferredDate" name="preferredDate"></div><div><label class="form-label" for="preferredTime">Preferred time</label><select class="select" id="preferredTime" name="preferredTime"><option value="Flexible">Flexible</option><option value="Morning (9 AM – 12 PM)">Morning · 9 AM–12 PM</option><option value="Afternoon (12 PM – 4 PM)">Afternoon · 12–4 PM</option><option value="Evening (4 PM – 7 PM)">Evening · 4–7 PM</option></select></div></div>
+              <div class="field-row"><div><label class="form-label" for="guests">Number of guests</label><select class="select" id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div><div><label class="form-label" for="currentCity">Your city <span class="field-note">(optional)</span></label><input class="input" id="currentCity" name="city" placeholder="e.g. Nashik" maxlength="90" autocomplete="address-level2"></div></div>
+              <label class="form-label" for="notes">Anything you'd like us to know? <span class="field-note">(optional)</span></label><textarea class="textarea" id="notes" name="notes" placeholder="Your interests, questions, or what you hope to experience…" maxlength="450"></textarea>
+              <div class="selection-summary">These are preferences, not live calendar slots. A consultation date is only confirmed after a concierge team responds.</div>
+              <div class="step-actions"><button type="button" class="text-button back" data-back="1">← Back</button><button type="button" class="btn btn-primary next" data-next="3">Continue <span class="arrow">→</span></button></div>
+            </section>
+            <section class="step-panel" id="step3" aria-labelledby="step3Label"><h4 id="step3Label" class="sr-only">Your personal contact details</h4>
+              <div class="field-row"><div><label class="form-label" for="firstName">First name <span class="required">*</span></label><input class="input" id="firstName" name="firstName" required autocomplete="given-name" placeholder="First name" maxlength="70"><div class="error" id="firstNameError"></div></div><div><label class="form-label" for="lastName">Last name <span class="required">*</span></label><input class="input" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Last name" maxlength="70"><div class="error" id="lastNameError"></div></div></div>
+              <label class="form-label" for="email">Email address <span class="required">*</span></label><input class="input" type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="150"><div class="error" id="emailError"></div>
+              <label class="form-label" for="phone">Phone number <span class="field-note">(required for phone / WhatsApp contact)</span></label><input class="input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" maxlength="24"><div class="error" id="phoneError"></div>
+              <div class="form-label" id="contactLabel">Preferred response channel</div><div class="radio-cards" role="radiogroup" aria-labelledby="contactLabel" style="grid-template-columns:repeat(3,1fr)"><label class="radio-card" style="min-height:64px"><input type="radio" name="contact" value="Email" checked><strong>Email</strong></label><label class="radio-card" style="min-height:64px"><input type="radio" name="contact" value="Phone"><strong>Phone</strong></label><label class="radio-card" style="min-height:64px"><input type="radio" name="contact" value="WhatsApp"><strong>WhatsApp</strong></label></div>
+              <label class="checkbox-row"><input type="checkbox" id="privacy" name="privacy"><span>I agree that the project team may use my contact information to respond to this enquiry. <strong>Required for a real submission.</strong> <span class="required">*</span></span></label><div class="error" id="privacyError"></div>
+              <label class="checkbox-row"><input type="checkbox" id="updates" name="updates"><span>I'd also like occasional project updates when official information becomes available. <strong>Optional.</strong></span></label>
+              <div class="step-actions"><button type="button" class="text-button back" data-back="2">← Back</button><button type="button" class="btn btn-primary next" data-next="4">Review details <span class="arrow">→</span></button></div>
+            </section>
+            <section class="step-panel" id="step4" aria-labelledby="step4Label"><h4 id="step4Label" class="sr-only">Review your enquiry</h4>
+              <p style="font-size:13px;color:var(--muted);line-height:1.85">A considered first conversation begins with the details below. You can still return and revise anything.</p>
+              <div class="review-block" id="reviewContent" aria-live="polite"></div>
+              <div class="selection-summary"><strong>Important:</strong> This is an interactive concept prototype. Selecting “Complete demo enquiry” does not send data, book a consultation, or notify a sales team.</div>
+              <div class="step-actions"><button type="button" class="text-button back" data-back="3">← Edit details</button><button type="submit" class="btn btn-primary">Complete demo enquiry <span class="arrow">↗</span></button></div>
+            </section>
+            <section id="successView" class="step-panel" aria-live="polite" tabindex="-1"><div class="success-icon">✓</div><div class="form-kicker">Your preview is complete</div><h3 class="success-title">A considered<br>beginning.</h3><p class="success-copy">Your enquiry journey has been completed in this prototype. In the live website, this is where the team would acknowledge your request and follow up through your chosen channel.</p><div class="success-disclaimer"><strong>Demo only:</strong> Nothing was transmitted, stored on a server or booked. Do not treat this as confirmation of an appointment.</div><div class="step-actions"><button type="button" class="text-button" id="restartForm">↶ Start again</button><button type="button" class="btn btn-outline" id="downloadSummary">Save demo summary ↓</button></div></section>
+            <div style="font-size:10px;color:#849085;line-height:1.8;margin-top:26px">Concept-stage website prototype · Project materials, privacy policy and live enquiry processing to be confirmed before launch.</div>
+          </form>
+        </div>
+      </div>
+    </div></section>
+    <section class="faq" id="questions"><div class="container faq-layout"><div><div class="kicker">A little more clarity</div><h2 class="section-title">Considered answers.</h2><p class="section-lead" style="font-size:13px">Every question deserves a transparent answer, especially at the beginning of an ambitious vision.</p></div><div class="faq-list">
+      <details><summary>Does a preferred date mean my visit is booked?</summary><p>No. This experience collects a preferred date only. A private site consultation must be explicitly confirmed by the project team after checking site access, safety, and availability.</p></details>
+      <details><summary>Can I book a helicopter tour?</summary><p>Not at this stage. Aviation access is an unconfirmed concept subject to specialist feasibility, safety requirements and regulatory approvals. It is not part of the current enquiry options.</p></details>
+      <details><summary>Are the proposed sustainability systems already operational?</summary><p>This website describes a concept-stage vision. Solar, water reuse, zero-waste systems and other features have different engineering, funding and approval dependencies. Hydrogen is specifically a future feasibility topic and should not be presented as installed infrastructure.</p></details>
+      <details><summary>Will my personal details be submitted?</summary><p>Not in this interactive prototype. The form runs locally and does not send information to a backend. A real launch will need approved privacy notices, secure lead processing and access controls.</p></details>
+      <details><summary>Are the images from the actual Masrul site?</summary><p>No. All photography on this prototype is illustrative and sourced from authentic stock photography, including a Sahyadri regional image. Actual site photographs and architect-approved project renders should replace these when available.</p></details>
+    </div></div></section>
+    <section class="final-invite"><div class="container final-invite-inner"><div><div class="kicker" style="color:#bcccba">The journey begins quietly</div><h2>Every extraordinary place<br>begins with a conversation.</h2><p>An introduction tailored to your idea of a more meaningful life, without urgency or pressure.</p></div><a href="#concierge" class="btn btn-light">Request an introduction <span class="arrow">↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-top"><a href="#home" class="brand"><span class="brand-mark">T.</span><span class="brand-name">TRANSFORMATIVE<br>LIVING<span class="brand-place">MASRUL · NASHIK</span></span></a><div class="footer-text">Transformative Living is a working positioning concept for a proposed sustainable community in Masrul, Nashik. Amenities, development plans, project timelines and environmental performance are preliminary and subject to approvals and feasibility. Photography is illustrative, not project imagery. This prototype does not accept real enquiries.</div></div><div class="footer-bottom"><div>© 2026 Transformative Living · Website experience concept</div><div>Real photography references: Unsplash · Built for concept review</div></div></div></footer>
+  <dialog id="filmDialog" class="film-dialog" aria-labelledby="filmDialogTitle">
+    <div class="film-dialog-top"><span id="filmDialogTitle">Transformative Living · A moving landscape</span><button id="closeFilm" class="dialog-close" type="button" aria-label="Close film">Close ×</button></div>
+    <video id="expandedFilm" controls playsinline loop preload="none" poster="assets/hero-poster.jpg" aria-label="Conceptual animated landscape film, silent, not a recording from Masrul">
+      <source src="assets/hero-ambient.mp4" type="video/mp4">
+    </video>
+    <div class="film-dialog-footer">Original 15-second atmospheric concept film, created for this prototype. The landscape is a stylised artistic interpretation, not drone photography, architectural visualization, or footage of the actual property. No sound.</div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    (()=>{
+      'use strict';
+      // Original local video. No network, third-party streaming, analytics or user interaction required.
+      const ambient=document.querySelector('#heroAmbient');
+      const expanded=document.querySelector('#expandedFilm');
+      const dialog=document.querySelector('#filmDialog');
+      const motionToggle=document.querySelector('#motionToggle');
+      const motionLabel=document.querySelector('#motionLabel');
+      const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+      let userPaused=reduceMotion.matches;
+      let heroInView=true;
+      const syncAmbient=()=>{
+        const play=!userPaused&&!reduceMotion.matches&&!document.hidden&&heroInView&&!dialog.open;
+        if(play)ambient.play().catch(()=>{});
+        else ambient.pause();
+        motionLabel.textContent=play?'Pause motion':'Play motion';
+        motionToggle.setAttribute('aria-pressed',String(!play));
+        motionToggle.setAttribute('aria-label',play?'Pause moving landscape':'Play moving landscape');
+        motionToggle.firstChild.textContent=play?'Ⅱ ':'▶ ';
+      };
+      motionToggle.addEventListener('click',()=>{userPaused=!userPaused;syncAmbient()});
+      document.querySelector('#openFilm').addEventListener('click',()=>{
+        if(!dialog.showModal){ // very old browser fallback: play in native media view.
+          expanded.controls=true;expanded.play().catch(()=>{});return;
+        }
+        dialog.showModal();ambient.pause();expanded.currentTime=0;expanded.play().catch(()=>{});syncAmbient();
+      });
+      document.querySelector('#closeFilm').addEventListener('click',()=>dialog.close());
+      dialog.addEventListener('close',()=>{expanded.pause();syncAmbient();document.querySelector('#openFilm').focus({preventScroll:true})});
+      dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+      document.addEventListener('visibilitychange',syncAmbient);
+      if(reduceMotion.addEventListener)reduceMotion.addEventListener('change',syncAmbient);
+      if('IntersectionObserver' in window){
+        const observer=new IntersectionObserver(entries=>{heroInView=entries[0].isIntersecting;syncAmbient()},{threshold:0.05});
+        observer.observe(document.querySelector('.hero-media'));
+      }
+      syncAmbient();
+      const form=document.querySelector('#enquiryForm');
+      let step=1;
+      const steps={1:{title:'How would you<br>like to connect?',description:"Tell us what sparked your interest. We'll tailor the enquiry around you.",label:'Your interest'},2:{title:'Your ideal<br>arrangement.',description:'Share your timing and how you would prefer to connect.',label:'Your preferences'},3:{title:'A way to<br>reach you.',description:'Only the essentials. We believe a private introduction should stay personal.',label:'Contact details'},4:{title:'One last<br>look.',description:'Review your details before completing the prototype enquiry.',label:'Review'}};
+      const names={site:'Private site consultation',virtual:'Virtual design conversation',sustainability:'Sustainability dialogue',dossier:'Request project dossier'};
+      const input=name=>form.elements.namedItem(name);
+      const value=name=>{const el=input(name);return el&&el.value?el.value.trim():''};
+      const radio=name=>{const el=form.querySelector(`input[name="${name}"]:checked`);return el?el.value:''};
+      const interests=()=>Array.from(form.querySelectorAll('input[name="interest"]:checked')).map(x=>x.value);
+      const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      const showToast=text=>{const t=document.querySelector('#toast');t.textContent=text;t.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove('show'),4200)};
+      function showStep(number){
+        step=number;
+        document.querySelectorAll('.step-panel').forEach(el=>el.classList.remove('active'));
+        document.querySelector(`#step${step}`).classList.add('active');
+        document.querySelector('#successView').classList.remove('active');
+        document.querySelector('#formTitle').innerHTML=steps[step].title;
+        document.querySelector('#formDescription').textContent=steps[step].description;
+        document.querySelector('#stepMeta').textContent=`Step 0${step} of 04`;
+        document.querySelector('#stepName').textContent=steps[step].label;
+        document.querySelectorAll('.progress-segment').forEach((s,i)=>s.classList.toggle('active',i<step));
+        document.querySelector('#globalError').textContent='';
+        if(step===4)renderReview();
+        document.querySelector('#formTitle').setAttribute('tabindex','-1');
+        document.querySelector('#formTitle').focus({preventScroll:true});
+        if(window.innerWidth<800)document.querySelector('#concierge').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      function setError(id,msg){const field=document.querySelector('#'+id);const box=document.querySelector('#'+id+'Error');if(field)field.classList.toggle('field-invalid',!!msg);if(field)field.setAttribute('aria-invalid',msg?'true':'false');if(box)box.textContent=msg||''}
+      function validContact(){
+        let okay=true;
+        const first=value('firstName'),last=value('lastName'),email=value('email'),phone=value('phone'),contact=radio('contact');
+        setError('firstName',first?'':'Please enter your first name.');if(!first)okay=false;
+        setError('lastName',last?'':'Please enter your last name.');if(!last)okay=false;
+        const emailOkay=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+        setError('email',emailOkay?'':'Enter a valid email address.');if(!emailOkay)okay=false;
+        const digits=phone.replace(/\D/g,'');
+        const phoneRequired=contact==='Phone'||contact==='WhatsApp';
+        const phoneOkay=(!phone&&!phoneRequired)||(digits.length>=8&&digits.length<=15);
+        setError('phone',phoneOkay?'':phoneRequired&&!phone?'Add a phone number for your chosen response method.':'Enter a valid phone number, including country code.');if(!phoneOkay)okay=false;
+        const p=document.querySelector('#privacy');document.querySelector('#privacyError').textContent=p.checked?'':'Please acknowledge the enquiry contact consent.';
+        if(!p.checked)okay=false;
+        if(!okay){const firstBad=document.querySelector('#step3 .field-invalid')||(!p.checked?p:null);if(firstBad)firstBad.focus()}
+        return okay;
+      }
+      function renderReview(){
+        const items=[['Experience',names[radio('experience')]||'Not selected'],['Interests',interests().join(', ')||'No specific preference'],['Format',radio('format')],['Preferred date',value('preferredDate')||'Flexible'],['Time',value('preferredTime')||'Flexible'],['Guests',value('guests')||'1'],['Name',`${value('firstName')} ${value('lastName')}`.trim()],['Email',value('email')],['Phone',value('phone')||'Not provided'],['Reply via',radio('contact')],['City',value('city')||'Not provided'],['Special notes',value('notes')||'None'],['Project updates',document.querySelector('#updates').checked?'Yes, opted in':'No']];
+        document.querySelector('#reviewContent').innerHTML=items.map(([key,val])=>`<div class="review-row"><span class="key">${escapeHtml(key)}</span><span class="value">${escapeHtml(val)}</span></div>`).join('');
+      }
+      function chooseExperience(choice){
+        const target=form.querySelector(`input[name="experience"][value="${choice}"]`);
+        if(target)target.checked=true;
+        const formats={site:'In-person',virtual:'Video call',sustainability:'Video call',dossier:'Email only'};
+        const f=form.querySelector(`input[name="format"][value="${formats[choice]}"]`);if(f)f.checked=true;
+        showStep(1);document.querySelector('#concierge').scrollIntoView({behavior:'smooth',block:'start'});
+        showToast('Your preferred experience has been selected.');
+      }
+      document.querySelectorAll('[data-select]').forEach(b=>b.addEventListener('click',()=>chooseExperience(b.dataset.select)));
+      document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{
+        const next=Number(b.dataset.next);
+        if(next===4&&!validContact())return;
+        showStep(next);
+      }));
+      document.querySelectorAll('.back').forEach(b=>b.addEventListener('click',()=>showStep(Number(b.dataset.back))));
+      ['firstName','lastName','email','phone'].forEach(id=>document.querySelector('#'+id).addEventListener('input',()=>setError(id,'')));
+      document.querySelector('#privacy').addEventListener('change',()=>document.querySelector('#privacyError').textContent='');
+      const today=new Date();const yyyy=today.getFullYear(),mm=String(today.getMonth()+1).padStart(2,'0'),dd=String(today.getDate()).padStart(2,'0');document.querySelector('#preferredDate').min=`${yyyy}-${mm}-${dd}`;
+      form.addEventListener('submit',e=>{
+        e.preventDefault();
+        if(step!==4)return;
+        if(!validContact()){showStep(3);validContact();return}
+        document.querySelectorAll('.step-panel').forEach(s=>s.classList.remove('active'));
+        document.querySelector('#successView').classList.add('active');
+        document.querySelector('.progress').style.display='none';document.querySelector('.progress-meta').style.display='none';
+        document.querySelector('#formTitle').style.display='none';document.querySelector('#formDescription').style.display='none';
+        document.querySelector('#successView').focus({preventScroll:true});
+        if(window.innerWidth<800)document.querySelector('#concierge').scrollIntoView({behavior:'smooth'});
+      });
+      document.querySelector('#restartForm').addEventListener('click',()=>{
+        form.reset();form.querySelector('input[name="experience"][value="site"]').checked=true;
+        document.querySelectorAll('.error').forEach(e=>e.textContent='');
+        document.querySelectorAll('.field-invalid').forEach(el=>el.classList.remove('field-invalid'));
+        document.querySelector('.progress').style.display='flex';document.querySelector('.progress-meta').style.display='flex';
+        document.querySelector('#formTitle').style.display='';document.querySelector('#formDescription').style.display='';
+        showStep(1);
+      });
+      document.querySelector('#downloadSummary').addEventListener('click',()=>{
+        const summary=[
+          'TRANSFORMATIVE LIVING - DEMO ENQUIRY SUMMARY',
+          'Masrul, Nashik | Interactive prototype only',
+          'NOT SUBMITTED OR BOOKED','',
+          `Experience: ${names[radio('experience')]}`,
+          `Interests: ${interests().join(', ')||'No specific preference'}`,
+          `Format: ${radio('format')}`,
+          `Preferred date: ${value('preferredDate')||'Flexible'}`,
+          `Preferred time: ${value('preferredTime')||'Flexible'}`,
+          `Guests: ${value('guests')}`,
+          `Name: ${value('firstName')} ${value('lastName')}`,
+          `Email: ${value('email')}`,
+          `Phone: ${value('phone')||'Not provided'}`,
+          `City: ${value('city')||'Not provided'}`,
+          `Contact via: ${radio('contact')}`,
+          `Notes: ${value('notes')||'None'}`,
+          `Optional updates: ${document.querySelector('#updates').checked?'Yes':'No'}`,
+          '', 'This is a local summary for demonstration, not an appointment confirmation.'
+        ].join('\n');
+        const file=new Blob([summary],{type:'text/plain;charset=utf-8'});const link=document.createElement('a');link.href=URL.createObjectURL(file);link.download='transformative-living-demo-enquiry.txt';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+      });
+      const menu=document.querySelector('#menuToggle'),nav=document.querySelector('#mainNav');
+      menu.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',open?'true':'false');menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');menu.textContent=open?'×':'☰'});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+    })();
+  </script>
+</body>
+</html>
