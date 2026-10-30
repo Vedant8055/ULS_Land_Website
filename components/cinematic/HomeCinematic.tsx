@@ -10,6 +10,7 @@ import { ActPhilosophy } from "./ActPhilosophy";
 import { ActVilla } from "./ActVilla";
 import { ActWorld } from "./ActWorld";
 import { ChapterRail } from "./ChapterRail";
+import { FinaleStudies } from "./finale/FinaleStudies";
 
 export function HomeCinematic() {
   useEffect(() => {
@@ -37,6 +38,7 @@ export function HomeCinematic() {
       <ActVilla />
       <ActWorld />
       <ActInvitation />
+      <FinaleStudies />
     </>
   );
 }
